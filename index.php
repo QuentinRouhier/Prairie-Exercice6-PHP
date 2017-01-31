@@ -6,13 +6,16 @@
   </head>
   <body>
     <?php
-    function tableau($array){
+    function nunu($array){
       sort($array);
       return $array;
     }
-
     $chameau = array("HTML","CSS","Javascript","PHP");
-    print_r (tableau($chameau));
+    foreach($chameau as $array)
+    {
+   echo $array ,'<br/>';
+  }
+
 
     function toto($arra){
       $titi = implode($arra, ",");
@@ -23,3 +26,4 @@
     ?>
   </body>
 </html>
+
