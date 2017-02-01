@@ -6,24 +6,26 @@
   </head>
   <body>
     <?php
-    function nunu($array){
-      sort($array);
-      return $array;
-    }
-    $chameau = array("HTML","CSS","Javascript","PHP");
-    foreach($chameau as $array)
-    {
-   echo $array ,'<br/>';
-  }
+ function order($array) {
+   sort($array);
+   return $array;
+ }
 
+ function glue($array) {
+   $lines = implode(', ', $array);
+   return $lines;
+ }
 
-    function toto($arra){
-      $titi = implode($arra, ",");
-      return $titi;
-    }
-    $amen = array("HTML","CSS","Javascript","PHP");
-    echo toto ($amen);
-    ?>
+ $langage = array("HTML","CSS","Javascript","PHP");
+
+ $result = order($langage);
+ foreach($result as $val) {
+     echo $val;
+ }
+ echo '<br>';
+ echo '<br>';
+ $stringConcat = glue($langage);
+     echo $stringConcat;
+?>
   </body>
 </html>
-
